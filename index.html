@@ -10,52 +10,41 @@
   <!-- Navbar -->
   <header>
     <nav class="navbar">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <div class="nav-left">
+        <a href="index.html" class="logo">MyWebsite</a>
+      </div>
+      <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <!-- Dark/Light mode toggle -->
+        <button class="mode-btn light-mode" id="light-btn">🌙</button>
+        <button class="mode-btn dark-mode" id="dark-btn">☀️</button>
+      </div>
     </nav>
   </header>
 
-  <!-- Mode circles (top-right, permanent display) -->
-  <div id="mode-buttons">
-    <button class="mode-btn light-mode" id="light-btn">🌙</button>
-    <button class="mode-btn dark-mode" id="dark-btn">☀️</button>
-  </div>
-
-  <!-- Main content -->
+  <!-- Hero Section -->
   <main>
-    <section>
+    <section class="hero">
       <h1>Welcome to My Website</h1>
-      <p>This is a simple website with dark/light mode toggle.</p>
+      <p>Experience a modern website with dark/light mode toggle.</p>
     </section>
 
     <!-- Dummy content for scrolling -->
-    <section style="height:2000px;"></section>
+    <section class="content">
+      <h2>About</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc et sollicitudin volutpat, justo neque commodo nulla, ut fermentum ligula leo ac arcu.</p>
+      <section style="height:1200px;"></section>
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 My Website</p>
+    <p>&copy; 2025 My Website. All rights reserved.</p>
   </footer>
 
   <!-- Dark mode script -->
-  <script>
-    // Persistent dark mode
-    if (localStorage.getItem("dark-mode") === "on") {
-      document.body.classList.add("dark-mode");
-    }
-
-    const lightBtn = document.getElementById("light-btn");
-    const darkBtn = document.getElementById("dark-btn");
-
-    lightBtn.addEventListener("click", () => {
-      document.body.classList.remove("dark-mode");
-      localStorage.setItem("dark-mode", "off");
-    });
-
-    darkBtn.addEventListener("click", () => {
-      document.body.classList.add("dark-mode");
-      localStorage.setItem("dark-mode", "on");
-    });
-  </script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>

@@ -1,19 +1,5 @@
-/* Body styling */
-body {
-    padding-top: 80px; /* space for fixed navbar */
-    transition: background-color 0.3s, color 0.3s;
-    background-color: white;
-    color: black;
-  }
-  
-  /* Dark mode body */
-  body.dark-mode {
-    background-color: #121212;
-    color: white;
-  }
-  
-  /* Navbar styling */
-  .navbar {
+/* Navbar styling */
+.navbar {
     width: 100%;
     background-color: #222;
     display: flex;
@@ -37,6 +23,11 @@ body {
     color: #ddd;
   }
   
+  /* Add top padding to body so content is not hidden behind navbar */
+  body {
+    padding-top: 80px;
+  }
+  
   /* Container to hold both buttons */
   #mode-buttons {
     position: fixed;
@@ -52,11 +43,12 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5em;
-    cursor: pointer;
+    cursor: default;
     transition: all 0.3s;
   }
   
@@ -64,26 +56,15 @@ body {
   .mode-btn.light-mode {
     background-color: black;
     color: white;
-    border: 2px solid black;
+    border-color: black;
   }
   
   /* Dark mode circle */
   .mode-btn.dark-mode {
     background-color: white;
     color: black;
-    border: 2px solid white;
+    border-color: white;
   }
+
   
-  /* Dark mode adjustments */
-  body.dark-mode .navbar {
-    background-color: #333;
-  }
-  
-  body.dark-mode .navbar a {
-    color: #eee;
-  }
-  
-  body.dark-mode .navbar a:hover {
-    color: #fff;
-  }
   

@@ -1,17 +1,22 @@
-// Persistent dark mode
+const modeToggle = document.getElementById("mode-toggle");
+
+// Load dark mode from localStorage
 if (localStorage.getItem("dark-mode") === "on") {
   document.body.classList.add("dark-mode");
+  modeToggle.textContent = "☀️";
+} else {
+  modeToggle.textContent = "🌙";
 }
 
-const lightBtn = document.getElementById("light-btn");
-const darkBtn = document.getElementById("dark-btn");
-
-lightBtn.addEventListener("click", () => {
-  document.body.classList.remove("dark-mode");
-  localStorage.setItem("dark-mode", "off");
-});
-
-darkBtn.addEventListener("click", () => {
-  document.body.classList.add("dark-mode");
-  localStorage.setItem("dark-mode", "on");
+// Toggle dark mode on click
+modeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("dark-mode", "on");
+    modeToggle.textContent = "☀️";
+  } else {
+    localStorage.setItem("dark-mode", "off");
+    modeToggle.textContent = "🌙";
+  }
 });

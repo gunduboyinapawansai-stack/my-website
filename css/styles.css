@@ -25,46 +25,35 @@ body {
     position: fixed;
     top: 15px;
     right: 15px;
-    font-size: 1.5em;
     width: 50px;
     height: 50px;
-    border: none;
     border-radius: 50%;
-    background-color: white; /* light mode */
-    color: black;
-    cursor: pointer;
-    z-index: 1000;
+    border: 2px solid black; /* circle border in light mode */
+    background-color: black;  /* light mode background */
+    color: white;             /* icon color */
+    font-size: 1.5em;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s;
   }
-  /* Button hover in light mode */
+  
   #dark-mode-toggle:hover {
-    background-color: black;
+    background-color: #333;
+    border-color: #555;
   }
   
-  /* Button style in dark mode */
+  /* Dark mode styles for button */
   body.dark-mode #dark-mode-toggle {
-    background-color: black;
-    color: white;
+    background-color: black;  /* keep button dark if you want */
+    color: white;             /* icon color */
+    border: 2px solid white;  /* white circle border in dark mode */
   }
   
-  /* Button hover in dark mode */
   body.dark-mode #dark-mode-toggle:hover {
-    background-color: white;
-  }
-  
-  /* =======================
-     Optional: style headings and paragraphs
-  ========================= */
-  h1 {
-    margin-top: 50px;
-    font-size: 2.5em;
-  }
-  
-  p {
-    font-size: 1.2em;
-    margin: 20px 0;
+    background-color: #222;
+    border-color: #fff;
   }
   

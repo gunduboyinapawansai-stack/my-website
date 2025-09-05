@@ -3,18 +3,29 @@ document.addEventListener("DOMContentLoaded", function() {
   const existingButton = document.getElementById("dark-mode-toggle");
   if (existingButton) existingButton.remove();
 
-  // Create the toggle button
+  // Create toggle button
   const toggleButton = document.createElement("button");
   toggleButton.id = "dark-mode-toggle";
 
-  // Set initial icon
+  // Check saved mode in localStorage
+  const savedMode = localStorage.getItem("dark-mode");
+  if (savedMode === "on") {
+    document.body.classList.add("dark-mode");
+  } else {
+    document.body.classList.remove("dark-mode");
+  }
+
+  // Set initial icon based on current mode
   toggleButton.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
 
   document.body.appendChild(toggleButton);
 
-  // Click event to toggle dark mode and icon
+  // Click event to toggle mode
   toggleButton.addEventListener("click", function() {
     document.body.classList.toggle("dark-mode");
-    toggleButton.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    const isDark = document.body.classList.contains("dark-mode");
+    toggleButton.textContent = isDark ? "☀️" : "🌙";
+    // Save current mode
+    localStorage.setItem("dark-mode", isDark ? "on" : "off");
   });
 });

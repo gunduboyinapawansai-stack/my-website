@@ -1,59 +1,67 @@
-/* =======================
-   Base styles (light mode)
-========================= */
-body {
-    background-color: white;
-    color: black;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  /* =======================
-     Dark mode styles
-  ========================= */
-  body.dark-mode {
-    background-color: #121212;
-    color: white;
-  }
-  
-  /* =======================
-     Dark mode toggle button
-  ========================= */ 
-  #dark-mode-toggle {
+ /* Navbar styling */
+.navbar {
+    width: 100%;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
     position: fixed;
-    top: 15px;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+  }
+  
+  .navbar a:hover {
+    color: #ddd;
+  }
+  
+  /* Add top padding to body so content is not hidden behind navbar */
+  body {
+    padding-top: 80px;
+  }
+  
+  /* Container to hold both buttons */
+  #mode-buttons {
+    position: fixed;
+    top: 80px; /* below navbar */
     right: 15px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+  }
+  
+  /* Base styles for both buttons */
+  .mode-btn {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid black;   /* circle border in light mode */
-    background-color: black;    /* circle background in light mode */
-    color: white;               /* icon color */
-    font-size: 1.5em;
+    border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    z-index: 1000;
+    font-size: 1.5em;
+    cursor: default;
     transition: all 0.3s;
   }
   
-  #dark-mode-toggle:hover {
-    background-color: #222;
-    border-color: #000;
+  /* Light mode circle */
+  .mode-btn.light-mode {
+    background-color: black;
+    color: white;
+    border-color: black;
   }
   
-  /* Dark mode button */
-  body.dark-mode #dark-mode-toggle {
-    background-color: white;    /* circle background in dark mode */
-    border: 2px solid white;    /* circle border in dark mode */
-    color: black;               /* icon color */
+  /* Dark mode circle */
+  .mode-btn.dark-mode {
+    background-color: white;
+    color: black;
+    border-color: white;
   }
-  
-  body.dark-mode #dark-mode-toggle:hover {
-    background-color: #eee;
-    border-color: #fff;
-  }
-  

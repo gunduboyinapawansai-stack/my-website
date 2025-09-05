@@ -92,5 +92,39 @@
     background-color: #121212;
     color: black;
   }
+  /* Default button (light mode) */
+#dark-mode-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 10px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1000;
+  }
   
+  /* Button hover (light mode) */
+  #dark-mode-toggle:hover {
+    background-color: #333;
+  }
+  
+  /* Dark mode body */
+  body.dark-mode {
+    background-color: #121212;
+    color: white;
+  }
+  
+  /* Button in dark mode */
+  body.dark-mode #dark-mode-toggle {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Button hover in dark mode */
+  body.dark-mode #dark-mode-toggle:hover {
+    background-color: #ddd;
+  }
   

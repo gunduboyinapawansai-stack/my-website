@@ -30,7 +30,7 @@ body {
     height: 50px;
     border: none;
     border-radius: 50%;
-    background-color: black; /* light mode */
+    background-color: white; /* light mode */
     color: black;
     cursor: pointer;
     z-index: 1000;

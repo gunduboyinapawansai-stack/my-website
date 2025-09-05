@@ -7,10 +7,14 @@ document.addEventListener("DOMContentLoaded", function() {
   const toggleButton = document.createElement("button");
   toggleButton.id = "dark-mode-toggle";
 
-  // Set initial icon based on current mode
+  // Set initial icon
   toggleButton.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
 
   document.body.appendChild(toggleButton);
 
-  // Add click event
+  // Click event to toggle dark mode and icon
   toggleButton.addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+    toggleButton.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+  });
+});

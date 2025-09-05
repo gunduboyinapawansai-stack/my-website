@@ -22,18 +22,22 @@ body {
      Dark mode toggle button
   ========================= */ 
   #dark-mode-toggle {
-   margin: 10px;
-   position: fixed;
-   top: 15px;
-   right: 15px;
-   padding: 10px 20px;
-   border: none;
-   border-radius: 8px;
-   cursor: pointer;
-   z-index: 1000;
-   background-color: black; /* light mode button */
-   color: white;
-   transition: background-color 0.3s, color 0.3s;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5em;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: black; /* light mode */
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, color 0.3s;
   }
   /* Button hover in light mode */
   #dark-mode-toggle:hover {

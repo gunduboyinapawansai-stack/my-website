@@ -42,7 +42,7 @@ body {
   
   #dark-mode-toggle:hover {
     background-color: #333;
-    border-color: #555;
+    border-color: white;
   }
   
   /* Dark mode styles for button */
@@ -56,4 +56,5 @@ body {
     background-color: #222;
     border-color: #fff;
   }
+  
   

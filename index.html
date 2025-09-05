@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Navbar -->
+  <!-- Navigation Bar -->
   <header>
     <nav class="navbar">
       <a href="index.html">Home</a>
@@ -16,7 +16,7 @@
     </nav>
   </header>
 
-  <!-- Mode buttons (top-right) -->
+  <!-- Mode circles -->
   <div id="mode-buttons">
     <button class="mode-btn light-mode" id="light-btn">🌙</button>
     <button class="mode-btn dark-mode" id="dark-btn">☀️</button>
@@ -29,7 +29,7 @@
       <p>This is a simple website with dark/light mode.</p>
     </section>
 
-    <!-- Dummy content to allow scrolling -->
+    <!-- Dummy content for scrolling -->
     <section style="height:2000px;"></section>
   </main>
 
@@ -39,7 +39,7 @@
 
   <!-- Dark mode script -->
   <script>
-    // Check saved mode
+    // Persistent dark mode
     if (localStorage.getItem("dark-mode") === "on") {
       document.body.classList.add("dark-mode");
     }

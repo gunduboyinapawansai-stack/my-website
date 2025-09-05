@@ -31,7 +31,7 @@ body {
     border: none;
     border-radius: 50%;
     background-color: black; /* light mode */
-    color: white;
+    color: black;
     cursor: pointer;
     z-index: 1000;
     display: flex;

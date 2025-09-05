@@ -22,6 +22,7 @@ body {
      Dark mode toggle button
   ========================= */
   #dark-mode-toggle {
+    margin: 10px;
     position: fixed;
     top: 15px;
     right: 15px;

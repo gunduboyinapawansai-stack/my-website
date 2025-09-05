@@ -71,4 +71,21 @@
     background-color: #121212;
     color: white;
   }
+  #dark-mode-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #444;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1000; /* stays on top */
+  }
+  
+  #dark-mode-toggle:hover {
+    background-color: #666;
+  }
+
   

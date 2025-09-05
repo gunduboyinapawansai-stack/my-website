@@ -46,7 +46,7 @@ body {
   
   /* Button hover in dark mode */
   body.dark-mode #dark-mode-toggle:hover {
-    background-color: #ddd;
+    background-color: black;
   }
   
   /* =======================

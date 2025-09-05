@@ -1,14 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Remove existing button if any
+  // Remove any existing button
   const existingButton = document.getElementById("dark-mode-toggle");
   if (existingButton) existingButton.remove();
 
-  // Create dark mode toggle button
+  // Create the button
   const toggleButton = document.createElement("button");
-  toggleButton.textContent = "Toggle Dark Mode";
   toggleButton.id = "dark-mode-toggle";
-  document.body.appendChild(toggleButton); // append to body
+  toggleButton.textContent = "Toggle Dark Mode";
+  document.body.appendChild(toggleButton);
 
+  // Add click event
   toggleButton.addEventListener("click", function() {
     document.body.classList.toggle("dark-mode");
   });

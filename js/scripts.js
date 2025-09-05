@@ -1,13 +1,9 @@
-// Simple JavaScript example
+ddocument.addEventListener("DOMContentLoaded", function() {
+  // Remove any existing button first
+  const existingButton = document.getElementById("dark-mode-toggle");
+  if (existingButton) existingButton.remove();
 
-// When the page loads, show a welcome message in the console
-console.log("Welcome to My Website!");
-
-// Example: toggle dark mode
-function toggleDarkMode() {
-  document.body.classList.toggle("dark-mode");
-}
-document.addEventListener("DOMContentLoaded", function() {
+  // Create a single toggle button
   const toggleButton = document.createElement("button");
   toggleButton.textContent = "Toggle Dark Mode";
   toggleButton.id = "dark-mode-toggle";

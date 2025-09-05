@@ -67,7 +67,7 @@
     transition: all 0.3s;
   }
   
-  /* Light/Dark mode toggle colors */
+  /* Toggle button colors */
   body.dark-mode .mode-btn {
     background-color: white;
     color: black;

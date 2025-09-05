@@ -41,7 +41,7 @@ body {
   }
   /* Button hover in light mode */
   #dark-mode-toggle:hover {
-    background-color: white;
+    background-color: black;
   }
   
   /* Button style in dark mode */

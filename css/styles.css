@@ -122,3 +122,48 @@ body:not(.dark-mode) .mode-btn {
     font-size: 0.9rem;
   }
 }
+/* Hero */
+.hero {
+  margin-top: 120px; /* Push content below navbar */
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+}
+
+.hero p {
+  font-size: 1rem;
+}
+
+/* -------------------- Responsive Fix -------------------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .toggles {
+    margin-top: 10px;
+  }
+
+  .hero {
+    margin-top: 180px; /* More space for stacked navbar */
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+}

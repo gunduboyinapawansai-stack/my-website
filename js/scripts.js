@@ -38,10 +38,10 @@ if (localStorage.getItem("language") === "te") {
 langToggle.addEventListener("click", () => {
   if (localStorage.getItem("language") === "en") {
     setLanguage("te");
-    langToggle.textContent = "అ";
+    langToggle.textContent = "E";
   } else {
     setLanguage("en");
-    langToggle.textContent = "E";
+    langToggle.textContent = "అ";
   }
 });
 

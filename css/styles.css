@@ -10,6 +10,7 @@
   top: 0;
   left: 0;
   z-index: 999;
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
 }
 
 /* Logo */
@@ -78,8 +79,46 @@ body:not(.dark-mode) .mode-btn {
   color: white;
   border-color: black;
 }
+
 /* Hero */
 .hero {
   margin-top: 100px;
   text-align: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+}
+
+.hero p {
+  font-size: 1rem;
+}
+
+/* -------------------- Responsive Fix -------------------- */
+
+/* Mobile view (phones & tablets) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .toggles {
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
 }
